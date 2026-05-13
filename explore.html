@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Explore | Smithers Alpine Stays</title>
+<meta name="description" content="Skiing, mountain biking, hiking, and local food in Smithers, BC. Explore Hudson Bay Mountain and the Bulkley Valley right from your cabin door." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .explore-page-hero { background-image: url('images/landscapes/snowy-treeline.jpg'); }
+</style>
+</head>
+<body data-season="winter">
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo" aria-label="Smithers Alpine Stays — home">
+        <img src="images/logo.png" alt="Smithers Alpine Stays" />
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cabins.html">Cabins</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="explore.html" class="active">Explore</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <div class="season-toggle" id="seasonToggle" role="switch" aria-checked="false" aria-label="Toggle between winter and summer themes" tabindex="0">
+          <span class="season-toggle__slider" aria-hidden="true"></span>
+          <span class="season-toggle__option season-toggle__option--winter" data-season="winter">
+            <span class="emoji">❄️</span><span class="label">Winter</span>
+          </span>
+          <span class="season-toggle__option season-toggle__option--summer" data-season="summer">
+            <span class="emoji">☀️</span><span class="label">Summer</span>
+          </span>
+        </div>
+        <a href="https://secure.webrez.com/hotel/4262" target="_blank" rel="noopener" class="nav-book-btn">Book Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero explore-page-hero">
+    <div class="page-hero-content">
+      <span class="section-eyebrow" style="color: rgba(255,255,255,0.85);">Adventure</span>
+      <h1>Explore</h1>
+      <p>Your gateway to adventure in the mountains and beyond.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="activities">
+
+        <article class="activity reveal">
+          <div class="activity__media" style="background-image: url('images/landscapes/ski-slope.jpg');"></div>
+          <div class="activity__text">
+            <span class="section-eyebrow">Winter</span>
+            <h3>Skiing &amp; Snowboarding</h3>
+            <p>Skiing and snowboarding on Hudson Bay Mountain offers an unforgettable alpine experience right from your doorstep. With over 300 acres of skiable terrain, the mountain features groomed runs, powder-filled glades, and steep chutes for every level. Ski-in/ski-out access from our cabins means you can hit the slopes in minutes and enjoy stunning views of the Bulkley Valley all day long. Consistent snowfall, uncrowded lift lines, and a laid-back mountain vibe make Hudson Bay a true hidden gem of northern BC.</p>
+            <a href="https://secure.webrez.com/hotel/4262" target="_blank" rel="noopener" class="btn btn-primary">Book Now</a>
+          </div>
+        </article>
+
+        <article class="activity reveal">
+          <div class="activity__media" style="background-image: url('images/explore/mountain-biking.avif');"></div>
+          <div class="activity__text">
+            <span class="section-eyebrow">Summer</span>
+            <h3>Mountain Biking</h3>
+            <p>Mountain biking in Smithers is a thrilling ride through the stunning landscapes of the Bulkley Valley. Trails range from smooth beginner routes to technical descents, with networks at Bluff, Piper, and Ptarmigan Recreation Sites catering to all skill levels. On and around Hudson Bay Mountain, riders enjoy flowy berms, wooden features, and breathtaking alpine views. The riding season runs May to November, with trails maintained by the Smithers Mountain Bike Association.</p>
+            <a href="https://secure.webrez.com/hotel/4262" target="_blank" rel="noopener" class="btn btn-primary">Book Now</a>
+          </div>
+        </article>
+
+        <article class="activity reveal">
+          <div class="activity__media" style="background-image: url('images/explore/hiking.webp');"></div>
+          <div class="activity__text">
+            <span class="section-eyebrow">Year-round</span>
+            <h3>Hiking</h3>
+            <p>Hiking around Hudson Bay Mountain and the Smithers area offers some of the most scenic trails in northern BC. From alpine ridge walks with panoramic views to peaceful forest paths and waterfall hikes, there's something for every pace and ability. Trails like Crater Lake, Silver King Basin, and Twin Falls take you through breathtaking terrain filled with wildflowers, wildlife, and crisp mountain air. Whether you want a quick morning walk or a full-day adventure, the trails are endless and just minutes from your cabin door.</p>
+            <a href="https://secure.webrez.com/hotel/4262" target="_blank" rel="noopener" class="btn btn-primary">Book Now</a>
+          </div>
+        </article>
+
+        <article class="activity reveal">
+          <div class="activity__media" style="background-image: url('images/explore/alpenhorn-interior.webp');"></div>
+          <div class="activity__text">
+            <span class="section-eyebrow">Local</span>
+            <h3>Cafés, Restaurants &amp; Bars</h3>
+            <p>Smithers offers a delightful array of local cafés, restaurants, and bars. Start your day at Two Sisters Café — a cozy spot known for homemade pastries and aromatic coffee. For craft beer, Smithers Brewing Co. is a must-visit, with inventive beers like the Hudson Bay ISA and Twin Falls Pale Ale brewed on-site. The Roadhouse offers internationally inspired comfort food made from locally sourced ingredients, with a curated list of premium whiskies, rums, and BC-centric wines.</p>
+            <a href="https://secure.webrez.com/hotel/4262" target="_blank" rel="noopener" class="btn btn-primary">Book Now</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="urgency">
+    <div class="container urgency-inner reveal">
+      <h2>Experience world-class skiing, hiking, biking, and local flavour — all minutes from your cabin door.</h2>
+      <a href="https://secure.webrez.com/hotel/4262" target="_blank" rel="noopener" class="btn">Book Now</a>
+    </div>
+  </section>
+
+  <footer class="sas-footer">
+    <div class="sas-footer-main">
+
+      <div>
+        <a class="sas-footer-logo" href="index.html">
+          <img src="images/logo.png" alt="Smithers Alpine Stays" />
+        </a>
+        <p class="sas-footer-tagline">Ski-in, ski-out cabins nestled on<br>Hudson Bay Mountain, Smithers, BC.</p>
+        <address class="sas-footer-address">
+          Alpine Way<br>
+          Smithers, British Columbia<br>
+          Canada
+        </address>
+      </div>
+
+      <div>
+        <p class="sas-footer-col-heading">Explore</p>
+        <ul class="sas-footer-nav">
+          <li><a href="index.html">Home <span class="sas-arrow">&rsaquo;</span></a></li>
+          <li><a href="cabins.html">Cabins <span class="sas-arrow">&rsaquo;</span></a></li>
+          <li><a href="reviews.html">Reviews <span class="sas-arrow">&rsaquo;</span></a></li>
+          <li><a href="explore.html">Explore <span class="sas-arrow">&rsaquo;</span></a></li>
+          <li><a href="about.html">About <span class="sas-arrow">&rsaquo;</span></a></li>
+          <li><a href="gallery.html">Gallery <span class="sas-arrow">&rsaquo;</span></a></li>
+          <li><a href="contact.html">Contact <span class="sas-arrow">&rsaquo;</span></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="sas-footer-col-heading">Connect</p>
+        <ul class="sas-footer-connect">
+          <li>
+            <a href="#" target="_blank" rel="noopener">
+              <span class="sas-connect-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+              </span>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener">
+              <span class="sas-connect-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+              </span>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener">
+              <span class="sas-connect-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </span>
+              Airbnb
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="sas-footer-col-heading">Stay in the loop</p>
+        <p class="sas-subscribe-copy">Seasonal offers, availability updates &amp; mountain news &mdash; straight to your inbox.</p>
+        <div class="sas-subscribe-row">
+          <input class="sas-subscribe-input" type="email" placeholder="Your email address" aria-label="Email address" />
+          <button class="sas-subscribe-btn" type="button">Subscribe</button>
+        </div>
+        <p class="sas-subscribe-note">No spam. Unsubscribe anytime.</p>
+      </div>
+
+    </div>
+
+    <div class="sas-footer-bar">
+      <p>&copy; 2025 Smithers Alpine Stays. All rights reserved. Built by <a href="https://lovelockadvertising.com" target="_blank" rel="noopener">Lovelock Advertising</a>.</p>
+      <a class="sas-footer-book-btn" href="https://secure.webrez.com/hotel/4262" target="_blank" rel="noopener">Book Now &rarr;</a>
+    </div>
+  </footer>
+
+<script src="main.js"></script>
+</body>
+</html>
