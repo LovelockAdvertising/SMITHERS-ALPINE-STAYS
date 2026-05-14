@@ -1,5 +1,5 @@
 (function () {
-  const body = document.body;
+  const root = document.documentElement;
 
   /* ===== Seasonal content swap (homepage only — guarded for subpages) ===== */
   const SEASONS = {
@@ -29,7 +29,7 @@
   };
 
   function applySeason(season) {
-    body.setAttribute('data-season', season);
+    root.setAttribute('data-season', season);
     if (toggle) toggle.setAttribute('aria-checked', season === 'summer' ? 'true' : 'false');
     const c = SEASONS[season];
     Object.keys(els).forEach((key) => {
@@ -37,21 +37,31 @@
     });
   }
 
+  function setSeason(season) {
+    applySeason(season);
+    try { sessionStorage.setItem('sas-season', season); } catch (e) {}
+  }
+
+  // The inline <head> script already set the season attribute on <html>
+  // based on sessionStorage or today's month. Sync the toggle ARIA and
+  // homepage text content to match.
+  applySeason(root.getAttribute('data-season') || 'winter');
+
   if (toggle) {
     toggle.addEventListener('click', (e) => {
       const optionEl = e.target.closest('.season-toggle__option');
       if (optionEl) {
-        applySeason(optionEl.dataset.season);
+        setSeason(optionEl.dataset.season);
       } else {
-        const current = body.getAttribute('data-season');
-        applySeason(current === 'winter' ? 'summer' : 'winter');
+        const current = root.getAttribute('data-season');
+        setSeason(current === 'winter' ? 'summer' : 'winter');
       }
     });
     toggle.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        const current = body.getAttribute('data-season');
-        applySeason(current === 'winter' ? 'summer' : 'winter');
+        const current = root.getAttribute('data-season');
+        setSeason(current === 'winter' ? 'summer' : 'winter');
       }
     });
   }

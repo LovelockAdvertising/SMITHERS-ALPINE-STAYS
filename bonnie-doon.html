@@ -12,8 +12,9 @@
 <style>
   .cabin-hero--bonnie { background-image: url('images/cabins/bonnie-doon/hero-winter.jpg'); }
 </style>
+<script>(function(){try{var s=sessionStorage.getItem('sas-season');if(s!=='winter'&&s!=='summer'){var m=new Date().getMonth();s=(m>=10||m<=3)?'winter':'summer';}document.documentElement.setAttribute('data-season',s);}catch(e){document.documentElement.setAttribute('data-season','winter');}})();</script>
 </head>
-<body data-season="winter">
+<body>
 
   <header class="nav" id="nav">
     <div class="container nav-inner">
