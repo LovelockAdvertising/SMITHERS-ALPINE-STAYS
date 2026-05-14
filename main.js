@@ -4,15 +4,15 @@
   /* ===== Seasonal content swap (homepage only — guarded for subpages) ===== */
   const SEASONS = {
     winter: {
-      heroHeadline: 'Breathtaking Views. Unforgettable Stays.',
-      heroSubheading: 'Ski-in, ski-out access. Unmatched comfort. All winter long.',
+      heroHeadline: 'Ski-in/Ski-out Cabin Rentals on Hudson Bay Mountain',
+      heroSubheading: 'Breathtaking views and unforgettable stays. Ski-in, ski-out access in Smithers, BC.',
       exploreHeadline: 'Explore Hudson Bay Mountain This Winter',
       exploreBody: 'From powder runs to snowshoeing and après-ski, adventure is right outside your door. Discover winter activities just minutes away.',
       urgencyText: 'Peak season fills fast. Lock in your winter escape now.'
     },
     summer: {
-      heroHeadline: 'Breathtaking Views. Unforgettable Stays.',
-      heroSubheading: 'Hike, bike, and unwind. Your summer mountain escape awaits.',
+      heroHeadline: 'Ski-in/Ski-out Cabin Rentals on Hudson Bay Mountain',
+      heroSubheading: 'Breathtaking views and unforgettable stays. Hike, bike and unwind in Smithers, BC.',
       exploreHeadline: 'Explore Smithers This Summer',
       exploreBody: 'From alpine hiking and mountain biking to kayaking on glacial lakes and wildlife spotting, endless summer adventure awaits.',
       urgencyText: 'Summer dates book quickly. Reserve your cabin today.'
