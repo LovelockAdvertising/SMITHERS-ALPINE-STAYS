@@ -429,6 +429,12 @@ section { padding: 96px 0; }
   50% { transform: translateX(-50%) translateY(-6px); opacity: 1; }
 }
 
+@media (max-width: 768px) {
+  [data-season="summer"] .hero {
+    --hero-image: url('images/home/hero-summer-mobile.webp');
+  }
+}
+
 /* ================================
    PAGE HERO (subpages — fixed image, no season swap)
    ================================ */
