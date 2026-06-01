@@ -1,63 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://lovelockadvertising.github.io/SMITHERS-ALPINE-STAYS/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://smithersalpinestays.com/index.html</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://lovelockadvertising.github.io/SMITHERS-ALPINE-STAYS/cabins.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://smithersalpinestays.com/cabins.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://lovelockadvertising.github.io/SMITHERS-ALPINE-STAYS/bonnie-doon.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://smithersalpinestays.com/double-black.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://lovelockadvertising.github.io/SMITHERS-ALPINE-STAYS/double-black.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://smithersalpinestays.com/bonnie-doon.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://lovelockadvertising.github.io/SMITHERS-ALPINE-STAYS/sunrise-chalet.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://smithersalpinestays.com/sunrise-chalet.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://lovelockadvertising.github.io/SMITHERS-ALPINE-STAYS/reviews.html</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://lovelockadvertising.github.io/SMITHERS-ALPINE-STAYS/gallery.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://smithersalpinestays.com/reviews.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://lovelockadvertising.github.io/SMITHERS-ALPINE-STAYS/explore.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://smithersalpinestays.com/explore.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://lovelockadvertising.github.io/SMITHERS-ALPINE-STAYS/about.html</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://smithersalpinestays.com/about.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
-    <loc>https://lovelockadvertising.github.io/SMITHERS-ALPINE-STAYS/contact.html</loc>
-    <lastmod>2026-05-14</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://smithersalpinestays.com/gallery.html</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <url>
+    <loc>https://smithersalpinestays.com/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
