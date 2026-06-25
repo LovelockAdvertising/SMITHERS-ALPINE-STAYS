@@ -431,7 +431,7 @@ section { padding: 96px 0; }
 
 @media (max-width: 768px) {
   [data-season="summer"] .hero {
-    --hero-image: url('images/home/hero-summer-mobile.webp');
+    --hero-image: url('images/home/hero-summer.avif');
   }
 }
 
