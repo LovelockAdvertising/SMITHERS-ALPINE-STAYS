@@ -1971,6 +1971,9 @@ footer.sas-footer {
 .email-popup.is-done .email-popup__copy,
 .email-popup.is-done .email-popup__note { display: none; }
 .email-popup.is-done .email-popup__success { display: block; }
+/* Inline feedback for the footer / newsletter signup rows */
+.sas-subscribe-note[data-state="ok"] { color: var(--color-accent); }
+.sas-subscribe-note[data-state="error"] { color: #d0433f; }
 
 @media (max-width: 620px) {
   .email-popup__card { grid-template-columns: 1fr; }

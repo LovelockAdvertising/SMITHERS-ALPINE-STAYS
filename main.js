@@ -204,11 +204,83 @@
     if (form) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
-        // TODO: send the email to your list provider here.
-        popup.classList.add('is-done');
-        setTimeout(closePopup, 2600);
+        const input = form.querySelector('.email-popup__input');
+        const email = input ? input.value.trim() : '';
+        if (!EMAIL_RE.test(email)) { if (input) input.focus(); return; }
+        const btn = form.querySelector('.email-popup__btn');
+        if (btn) { btn.textContent = 'Joining…'; btn.disabled = true; }
+        subscribeToBrevo(email).finally(() => {
+          popup.classList.add('is-done');
+          setTimeout(closePopup, 3400);
+        });
       });
     }
   }
+
+  /* ===== Newsletter signup → Brevo =====
+     One handler for every signup on the site: the footer row on each page,
+     the newsletter sections on the sales pages, and the home-page popup.
+     Posts the fields Brevo expects (EMAIL + honeypot + locale) straight to
+     the hosted form URL, styled with the site's own inputs. */
+  const BREVO_ACTION = 'https://9b2a4e9b.sibforms.com/serve/MUIFAFVt_lfFbbrC848bLCBgfedf77HQ5LAAaoe-8IWXs2aGgFzuhQeLl7iMip4y5kVOZ2wy3Mvbna8wpawIzeXdNHnQ8M8EbcsYEtnkX70EtcF2PNmNXLUHlcoNzikK9VCkUBcJu1hcB5uUlefcvr-mLtoIOBAaZQn4wsD3lPOp8xAgAMx6naX_i-oa-fYrLFBL05nUQ8Ze3hneiw==';
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function subscribeToBrevo(email) {
+    const body = new URLSearchParams();
+    body.set('EMAIL', email);
+    body.set('email_address_check', ''); // Brevo honeypot, must stay empty
+    body.set('locale', 'en');
+    return fetch(BREVO_ACTION, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body.toString()
+    });
+  }
+
+  document.querySelectorAll('.sas-subscribe-row').forEach((row) => {
+    const input = row.querySelector('.sas-subscribe-input');
+    const btn = row.querySelector('.sas-subscribe-btn');
+    if (!input || !btn) return;
+    const note = row.parentElement && row.parentElement.querySelector('.sas-subscribe-note');
+    let busy = false;
+
+    const setNote = (msg, state) => {
+      if (!note) return;
+      note.textContent = msg;
+      note.setAttribute('data-state', state);
+    };
+
+    const submit = () => {
+      if (busy) return;
+      const email = input.value.trim();
+      if (!EMAIL_RE.test(email)) {
+        input.focus();
+        setNote('Please enter a valid email address.', 'error');
+        return;
+      }
+      busy = true;
+      const label = btn.textContent;
+      btn.textContent = 'Joining…';
+      btn.disabled = true;
+      subscribeToBrevo(email)
+        .then(() => {
+          input.value = '';
+          btn.textContent = 'Subscribed ✓';
+          setNote('Thanks! Check your inbox to confirm your subscription.', 'ok');
+        })
+        .catch(() => {
+          btn.textContent = label;
+          btn.disabled = false;
+          busy = false;
+          setNote('Something went wrong. Please try again.', 'error');
+        });
+    };
+
+    btn.addEventListener('click', submit);
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') { e.preventDefault(); submit(); }
+    });
+  });
 
 })();
