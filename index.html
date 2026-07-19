@@ -55,7 +55,7 @@
   <!-- ================ NAV ================ -->
   <header class="nav" id="nav">
     <div class="container nav-inner">
-      <a href="index.html" class="logo" aria-label="Smithers Alpine Stays — home">
+      <a href="index.html" class="logo" aria-label="Smithers Alpine Stays, home">
         <img src="images/logo.png" alt="Smithers Alpine Stays" width="500" height="500" loading="eager" fetchpriority="high" />
       </a>
       <nav>
@@ -225,7 +225,7 @@
           <span class="section-eyebrow">About</span>
           <h2>About Smithers Alpine Stays</h2>
           <p>Self-contained ski-in/ski-out cabins nestled on Hudson Bay Mountain and tucked into peaceful corners of the surrounding forest, offering year-round access to nature's best in Smithers, BC.</p>
-          <p>Your ideal base for adventure in every season — carve down snowy slopes in winter, explore scenic hiking and mountain biking trails in summer, unwind in your private hot tub, spot wildlife, paddle across glacial lakes, or simply soak in the breathtaking mountain views.</p>
+          <p>Your ideal base for adventure in every season, carve down snowy slopes in winter, explore scenic hiking and mountain biking trails in summer, unwind in your private hot tub, spot wildlife, paddle across glacial lakes, or simply soak in the breathtaking mountain views.</p>
           <a href="about.html" class="link-arrow">Learn More →</a>
         </div>
         <div class="about-image reveal" role="img" aria-label="Hudson Bay Mountain landscape near Smithers"></div>
@@ -267,6 +267,8 @@
           <li><a href="about.html">About <span class="sas-arrow">&rsaquo;</span></a></li>
           <li><a href="gallery.html">Gallery <span class="sas-arrow">&rsaquo;</span></a></li>
           <li><a href="contact.html">Contact <span class="sas-arrow">&rsaquo;</span></a></li>
+          <li><a href="winter-sales.html">Winter Sales <span class="sas-arrow">&rsaquo;</span></a></li>
+          <li><a href="summer-sales.html">Summer Sales <span class="sas-arrow">&rsaquo;</span></a></li>
         </ul>
       </div>
 
@@ -311,7 +313,7 @@
 
       <div>
         <p class="sas-footer-col-heading">Stay in the loop</p>
-        <p class="sas-subscribe-copy">Seasonal offers, availability updates &amp; mountain news &mdash; straight to your inbox.</p>
+        <p class="sas-subscribe-copy">Seasonal offers, availability updates &amp; mountain news, straight to your inbox.</p>
         <div class="sas-subscribe-row">
           <input class="sas-subscribe-input" type="email" placeholder="Your email address" aria-label="Email address" />
           <button class="sas-subscribe-btn" type="button">Subscribe</button>
@@ -322,10 +324,33 @@
     </div>
 
     <div class="sas-footer-bar">
-      <p>&copy; 2025 Smithers Alpine Stays. All rights reserved. Built by <a href="https://lovelockadvertising.com" target="_blank" rel="noopener">Lovelock Advertising</a>.</p>
+      <p>&copy; 2026 Smithers Alpine Stays. All rights reserved. Built by <a href="https://lovelockadvertising.com" target="_blank" rel="noopener">Lovelock Advertising</a>.</p>
       <a class="sas-footer-book-btn" href="https://secure.webrez.com/hotel/4262" target="_blank" rel="noopener">Book Now &rarr;</a>
     </div>
   </footer>
+
+  <!-- ================ EMAIL SIGNUP POPUP (home page only) ================ -->
+  <div class="email-popup" id="emailPopup" role="dialog" aria-modal="true" aria-labelledby="emailPopupTitle" aria-hidden="true">
+    <div class="email-popup__backdrop" data-popup-close></div>
+    <div class="email-popup__card">
+      <button class="email-popup__close" type="button" aria-label="Close" data-popup-close>&times;</button>
+      <div class="email-popup__art" aria-hidden="true">
+        <span class="email-popup__badge">Book Direct &amp; Save</span>
+      </div>
+      <div class="email-popup__body">
+        <span class="section-eyebrow">Join the list</span>
+        <h2 class="email-popup__title" id="emailPopupTitle">First to know, first to book</h2>
+        <p class="email-popup__copy">Seasonal offers, availability drops and Bulkley Valley mountain news, straight to your inbox.</p>
+        <!-- TODO: wire this form action/handler to your email list provider -->
+        <form class="email-popup__form" id="emailPopupForm" novalidate>
+          <input class="email-popup__input" type="email" name="email" placeholder="Your email address" aria-label="Email address" required />
+          <button class="email-popup__btn" type="submit">Subscribe</button>
+        </form>
+        <p class="email-popup__note">No spam. Unsubscribe anytime.</p>
+        <p class="email-popup__success">Thanks for joining, keep an eye on your inbox for offers and mountain news.</p>
+      </div>
+    </div>
+  </div>
 
 <script src="main.js"></script>
 </body>

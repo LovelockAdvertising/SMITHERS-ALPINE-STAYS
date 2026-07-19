@@ -1,7 +1,7 @@
 (function () {
   const root = document.documentElement;
 
-  /* ===== Seasonal content swap (homepage only — guarded for subpages) ===== */
+  /* ===== Seasonal content swap (homepage only, guarded for subpages) ===== */
   const SEASONS = {
     winter: {
       heroHeadline: 'Ski-in/Ski-out Cabin Rentals on Hudson Bay Mountain',
@@ -134,7 +134,7 @@
     });
   }
 
-  /* ===== Reviews — show all ===== */
+  /* ===== Reviews, show all ===== */
   const reviewsGrid = document.querySelector('.reviews-grid--three');
   const loadMoreBtn = document.getElementById('loadMoreReviews');
   const loadMoreCount = document.getElementById('loadMoreCount');
@@ -159,6 +159,54 @@
           card.classList.add('visible');
         });
         loadMoreBtn.parentElement.style.display = 'none';
+      });
+    }
+  }
+
+  /* ===== Email signup popup (home page only) ===== */
+  const popup = document.getElementById('emailPopup');
+  if (popup) {
+    const STORAGE_KEY = 'sas-email-popup-seen';
+    // Force-show for design/testing: open index.html?popup=1 (or #popup)
+    const forced = /[?&]popup=1\b/.test(location.search) || location.hash === '#popup';
+
+    let alreadySeen = false;
+    try { alreadySeen = localStorage.getItem(STORAGE_KEY) === '1'; } catch (e) {}
+
+    const markSeen = () => {
+      if (forced) return; // don't burn the flag while previewing
+      try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+    };
+
+    const openPopup = () => {
+      popup.classList.add('is-open');
+      popup.setAttribute('aria-hidden', 'false');
+      markSeen();
+    };
+    const closePopup = () => {
+      popup.classList.remove('is-open');
+      popup.setAttribute('aria-hidden', 'true');
+    };
+
+    if (forced || !alreadySeen) {
+      // Show shortly after first load so it isn't jarring.
+      setTimeout(openPopup, forced ? 0 : 1400);
+    }
+
+    popup.querySelectorAll('[data-popup-close]').forEach((el) => {
+      el.addEventListener('click', closePopup);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && popup.classList.contains('is-open')) closePopup();
+    });
+
+    const form = document.getElementById('emailPopupForm');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // TODO: send the email to your list provider here.
+        popup.classList.add('is-done');
+        setTimeout(closePopup, 2600);
       });
     }
   }
