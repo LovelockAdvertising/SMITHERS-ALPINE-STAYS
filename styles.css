@@ -1854,13 +1854,13 @@ footer.sas-footer {
 .email-popup__art {
   position: relative;
   min-height: 320px;
-  background-image: url('images/SKIING-popup.jpg');
+  background-image: url('images/SKIING-popup.avif');
   background-size: cover;
   background-position: center;
   transition: background-image var(--t-base);
 }
 [data-season="summer"] .email-popup__art {
-  background-image: url('images/MTB-popup.JPG');
+  background-image: url('images/MTB-popup.avif');
   background-position: center 78%;
 }
 .email-popup__art::after {
