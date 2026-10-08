@@ -167,7 +167,7 @@
   const popup = document.getElementById('emailPopup');
   if (popup) {
     const STORAGE_KEY = 'sas-email-popup-seen';
-    // Force-show for design/testing: open index.html?popup=1 (or #popup)
+    // Force-show for design/testing: open /?popup=1 (or #popup)
     const forced = /[?&]popup=1\b/.test(location.search) || location.hash === '#popup';
 
     let alreadySeen = false;
